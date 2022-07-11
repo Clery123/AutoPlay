@@ -64,7 +64,7 @@ def play():
         result = cv.matchTemplate(img_np, needle_img, cv.TM_CCOEFF_NORMED)
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
         top_left = max_loc[0]
-        if(max_val >=0.65):
+        if(max_val >=0.8):
         #Move mouse to the position
             mouse.move(top_left+60,385)
         thread = threading.Thread(target=play)
